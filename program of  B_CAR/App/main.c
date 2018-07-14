@@ -416,7 +416,7 @@ void PIT0_IRQHandler(void)//定时器中断服务函数
                         lukuangudge();//路况判断       
                     }
                     else
-                      if(LK_yanshi>15)//检测到起跑线
+                      if(LK_yanshi>30)//检测到起跑线
                         mubiao_speed=0;   //开始停车
                       //if(pof)
                         //mubiao_speed=0;

@@ -4,13 +4,13 @@
 #include  "common.h"
 
 /*
- * Include ÓÃ»§×Ô¶¨ÒåµÄÍ·ÎÄ¼þ
+ * Include ï¿½Ã»ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Í·ï¿½Ä¼ï¿½
  */
 #include  "MK60_wdog.h"
-#include  "MK60_gpio.h"     //IO¿Ú²Ù×÷
-#include  "MK60_uart.h"     //´®¿Ú
+#include  "MK60_gpio.h"     //IOï¿½Ú²ï¿½ï¿½ï¿½
+#include  "MK60_uart.h"     //ï¿½ï¿½ï¿½ï¿½
 #include  "MK60_SysTick.h"
-#include  "MK60_lptmr.h"    //µÍ¹¦ºÄ¶¨Ê±Æ÷(ÑÓÊ±)
+#include  "MK60_lptmr.h"    //ï¿½Í¹ï¿½ï¿½Ä¶ï¿½Ê±ï¿½ï¿½(ï¿½ï¿½Ê±)
 #include  "MK60_i2c.h"      //I2C
 #include  "MK60_spi.h"      //SPI
 #include  "MK60_ftm.h"      //FTM
@@ -23,16 +23,17 @@
 #include  "VCAN_LCD.h"               //LCD
 #include  "VCAN_LED.H"          //LED
 #include  "VCAN_KEY.H"          //KEY
-#include  "VCAN_MMA7455.h"      //ÈýÖá¼ÓËÙ¶ÈMMA7455
-#include  "VCAN_NRF24L0.h"      //ÎÞÏßÄ£¿éNRF24L01+
-#include  "VCAN_RTC_count.h"    //RTC Ê±¼ä×ª»»
-#include  "VCAN_camera.h"       //ÉãÏñÍ·×ÜÍ·ÎÄ¼þ
+#include  "VCAN_MMA7455.h"      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½MMA7455
+#include  "VCAN_NRF24L0.h"      //ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½NRF24L01+
+#include  "VCAN_RTC_count.h"    //RTC Ê±ï¿½ï¿½×ªï¿½ï¿½
+#include  "VCAN_camera.h"       //ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Í·ï¿½Ä¼ï¿½
 
 //#include "OLED.h"
 //#include "key.h"
 //#include "LCDkongzhi.h"
 #include "tuxiangchuli.h"
 #include "duoji_dianji.h"
+#include "saomiao.h"
 
-//#include  "VCAN_computer.h"     //¶à¹¦ÄÜµ÷ÊÔÖúÊÖ
+//#include  "VCAN_computer.h"     //ï¿½à¹¦ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #endif  //__INCLUDE_H__

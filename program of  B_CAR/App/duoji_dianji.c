@@ -27,8 +27,18 @@ void DSYJ_dianji_fanzhuan(int zhankongbi)//zhankongbi 0-10000反转
 
 void DSYJ_dianji_zhengzhuan(int zhankongbi )//zhankongbi 0-10000正转
 {
-    ftm_pwm_duty(FTM2,FTM_CH0,zhankongbi); // 电机
-    ftm_pwm_duty(FTM2,FTM_CH1,0);   
+    if(zhankongbi > 2000) zhankongbi = 3000;
+    else if(zhankongbi < -2000) zhankongbi = -3000;
+    if(zhankongbi > 0)
+    {
+      ftm_pwm_duty(FTM2,FTM_CH0,zhankongbi); // 电机
+      ftm_pwm_duty(FTM2,FTM_CH1,0);   
+    }
+    else
+    {
+      ftm_pwm_duty(FTM2,FTM_CH0,0); // 电机
+      ftm_pwm_duty(FTM2,FTM_CH1,-zhankongbi);   
+    }
 
 
 }
@@ -37,7 +47,7 @@ void DSYJ_dianji_zhengzhuan(int zhankongbi )//zhankongbi 0-10000正转
   /*******************************************************速度控制*****************************************************/  
 
 int MC_piancha,d_MC_piancha,last_MC,NOW_SPEED=0;
-int dianji_kp,dianji_kd;
+double dianji_kp,dianji_kd,dianji_ki;
 int dianji_zhankongbi,last_dianji_zhankongbi,CS=11;
 extern char pof,shizi_flag;
 void dianji_canshu_init(void)//电机参数初始化
@@ -45,7 +55,8 @@ void dianji_canshu_init(void)//电机参数初始化
       MC_piancha=0;
       d_MC_piancha=0;
       last_MC=0;
-      dianji_kp=60;
+      dianji_kp=35;
+      dianji_ki=0.16;
       dianji_kd=25;
       dianji_zhankongbi=0;
       last_dianji_zhankongbi=0;
@@ -72,7 +83,7 @@ void DSYJ_dianji_PID(int QWMC)//速度PID控制
 //          }else
           if(LK_yanshi>30&&NOW_SPEED>6)//检测到起跑线后延时150ms后且当前速度大于6
           {
-                  dut=2500;//反转力度20%，反转最多为30%占空比，用于停车距离控制
+                  dut=2000;//反转力度20%，反转最多为30%占空比，用于停车距离控制
                   men=-4;
           }
           else
@@ -109,22 +120,15 @@ void DSYJ_dianji_PID(int QWMC)//速度PID控制
         
         //***************电机控制pid公式****************************//
         MC_piancha=QWMC-NOW_SPEED;//脉冲偏差=期望脉冲-实际脉冲
+        jiji = NOW_SPEED;
         d_MC_piancha=MC_piancha-last_MC;
         last_MC=MC_piancha;
-        dianji_zhankongbi=last_dianji_zhankongbi+dianji_kp*MC_piancha+dianji_kd*d_MC_piancha;
-        if(dianji_zhankongbi>7000)
-          dianji_zhankongbi=7000; 
-        if(dianji_zhankongbi<0)
-          dianji_zhankongbi=0; 
+
+        dianji_zhankongbi += (int)(dianji_ki* MC_piancha + dianji_kp* d_MC_piancha); //[2 0.1 0.1]
+
         last_dianji_zhankongbi=dianji_zhankongbi;
         
         
-        if(MC_piancha<men)//实际速度和期望速度差值小于设定的门槛
-        DSYJ_dianji_fanzhuan(dut);//安照设定的占空比反转
-          else 
-            if(MC_piancha>6)//如果期望速度比实际速度大6以上，就直接控制电机猛转加速
-              DSYJ_dianji_zhengzhuan(6500);//bangbang控制算法
-          else
         DSYJ_dianji_zhengzhuan(last_dianji_zhankongbi);//否则通过pid调节,有限幅
 
 }

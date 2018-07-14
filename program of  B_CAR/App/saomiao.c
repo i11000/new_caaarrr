@@ -510,7 +510,7 @@ void lkcongzhongjiansaomiao()
   if(chushizi_flag==1)
   {
     chushizi_flag=0;
-    chushizichuli=1;
+    //chushizichuli=1;
      
   }
       
@@ -564,7 +564,7 @@ void lkcongzhongjiansaomiao()
       }
       
       int i=35;
-      jiji=street_len;
+      //jiji=street_len;
       //jiji=street_width;
       if(yuan_diu == 1 && i == 35)    //右圆环
       {
@@ -980,7 +980,7 @@ void pianchachuli()//偏差处理
     }
     /***********************************************/
     /************************出环右****************************/
-        if(chuhuanyou_flag>0 && chuhuanyou_flag<30)//拐50ms
+        if(chuhuanyou_flag>0 && chuhuanyou_flag<10)//拐50ms
     {
           //jiji++;
           chuhuanyou_flag++;

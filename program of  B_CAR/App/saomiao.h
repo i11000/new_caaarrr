@@ -6,13 +6,14 @@ void pianchachuli();
 void lkshaomiao();
 //void huaxian(int x1,int y1,int x2,int y2)
 extern int rushiziy,rushizix,rushiziy2,rushizix2;
-extern char cur_L_real_rest_flag;     //×óÔ²»·×¼È·¸´Î»Ê¶±ð±êÖ¾
-extern char cur_R_real_rest_flag;     //×óÔ²»·×¼È·¸´Î»Ê¶±ð±êÖ¾
+extern char cur_L_real_rest_flag;     //ï¿½ï¿½Ô²ï¿½ï¿½×¼È·ï¿½ï¿½Î»Ê¶ï¿½ï¿½ï¿½Ö¾
+extern char cur_R_real_rest_flag;     //ï¿½ï¿½Ô²ï¿½ï¿½×¼È·ï¿½ï¿½Î»Ê¶ï¿½ï¿½ï¿½Ö¾
 extern char cur_R_ready_flag;
 extern char cur_L_ready_flag;
-extern char cur_R_real_delay_flag;    //ÓÒÔ²»·×¼È·³ÚÐ¸Ê¶±ð±êÖ¾
-extern char cur_R_ready_rest_flag;    //ÓÒÔ²»·Ô¤ÅÐ¶Ï¸´Î»±äÁ¿
-extern char street_len;             //Ö±µÀ³¤¶È
-extern char cur_L_real_delay_flag;    //ÓÒÔ²»·×¼È·³ÚÐ¸Ê¶±ð±êÖ¾
+extern char cur_R_real_delay_flag;    //ï¿½ï¿½Ô²ï¿½ï¿½×¼È·ï¿½ï¿½Ð¸Ê¶ï¿½ï¿½ï¿½Ö¾
+extern char cur_R_ready_rest_flag;    //ï¿½ï¿½Ô²ï¿½ï¿½Ô¤ï¿½Ð¶Ï¸ï¿½Î»ï¿½ï¿½ï¿½ï¿½
+extern char street_len;             //Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+extern char cur_L_real_delay_flag;    //ï¿½ï¿½Ô²ï¿½ï¿½×¼È·ï¿½ï¿½Ð¸Ê¶ï¿½ï¿½ï¿½Ö¾
 
+extern char jiji,papa;
 #endif
