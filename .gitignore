@@ -50,3 +50,47 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+*.pbd
+*.pbi
+*.dni
+*.bat
+*.cout
+*.tmp
+*.dbgdt
+*.url
+*.eww
+*.wspos
+*.wsdt
+*.ewt
+program of  B_CAR/Prj/IAR/vcan_Kinetis.ewp
+program of  B_CAR/Prj/IAR/vcan_Kinetis.ewd
+program of  B_CAR/Prj/IAR/vcan_Kinetis.dep
+program of  B_CAR/Prj/IAR/settings/vcan_Kinetis_DZ10_Release.jlink
+program of  B_CAR/Prj/IAR/settings/vcan_Kinetis.DZ10_Release.general.xcl
+program of  B_CAR/Prj/IAR/settings/vcan_Kinetis.DZ10_Release.driver.xcl
+program of  B_CAR/Prj/IAR/settings/vcan_Kinetis.crun
+program of  B_CAR/Prj/IAR/FN15_Debug/Obj/vcan_Kinetis.pbd.browse
+program of  B_CAR/Prj/IAR/EWADBF.tmp.c
+program of  B_CAR/Prj/IAR/DZ10_Release/Obj/vcan_Kinetis.pbd.browse
+program of  B_CAR/Prj/IAR/DZ10_Release/Exe/vcan_Kinetis.sim
+program of  B_CAR/Prj/IAR/DZ10_Debug/Obj/vcan_Kinetis.pbd.browse
+program of  B_CAR/Prj/IAR/config files/vcan_ROM_K60X512.icf
+program of  B_CAR/Prj/IAR/config files/vcan_ROM_K60N512.icf
+program of  B_CAR/Prj/IAR/config files/vcan_RAM_K60X512.icf
+program of  B_CAR/Prj/IAR/config files/vcan_RAM_K60N512.icf
+program of  B_CAR/Prj/IAR/config files/64KB_Ram.icf
+program of  B_CAR/Prj/IAR/config files/64KB_Pflash_64KB_Dflash.icf
+program of  B_CAR/Prj/IAR/config files/512KB_Pflash.icf
+program of  B_CAR/Prj/IAR/config files/32KB_Ram.icf
+program of  B_CAR/Prj/IAR/config files/256KB_Pflash_256KB_Dflash.icf
+program of  B_CAR/Prj/IAR/config files/256KB_Pflash.icf
+program of  B_CAR/Prj/IAR/config files/128KB_Ram.icf
+program of  B_CAR/Prj/IAR/config files/128KB_Pflash_128KB_Dflash.icf
+program of  B_CAR/Prj/IAR/config files/128KB_Pflash.icf
+program of  B_CAR/Prj/IAR/Backup of vcan_Kinetis.ewp
+program of  B_CAR/Prj/IAR/Backup of vcan_Kinetis.ewd
+program of  B_CAR/Prj/IAR/Backup (2) of vcan_Kinetis.ewp
+program of  B_CAR/Prj/IAR/Backup (2) of vcan_Kinetis.ewd
+program of  B_CAR/new-cccaaar/
+*.json
+*.s
